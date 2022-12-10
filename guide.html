@@ -4,9 +4,228 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/asset/style/reset.css">
+    <link rel="stylesheet" href="/asset/style/common.css">
     <title>가이드</title>
+    <style>
+        .guide_wrap {
+            /* padding: 30px 20px; */
+            padding: 0 20px 30px;
+        }
+        .guide_wrap .guide_tit:first-child { margin-top: 0; }
+        .guide_wrap .guide_tit {
+            margin:25px 0 15px;
+        }
+        .guide_wrap .btn {margin-top:15px;}
+        .guide_wrap .btn_area { margin-top: 15px;}
+        .guide_wrap .btn_area > .btn {margin-top:0;}
+        .guide_wrap hr {margin:40px 0 20px; height:1px; border:0; background:var(--bg-4);}
+    </style>
 </head>
 <body>
+    <div class="wrap fixed">
+        <!-- <a href="#main_content">Skip to main content</a> -->
+        <div class="headerArea">
+            <header class="header">
+                <!-- <a href="#" class="btnArr"><span class="hiddenText">이전페이지로 가기</span></a> -->
+                <h2 class="title">가이드</h2>
+                <!-- <span class="tool">
+                    <button class="btnIcon ico_writing"><span class="hiddenText">글쓰기</span></button>
+                    <button class="btnIcon ico_setting"><span class="hiddenText">설정</span></button>
+                    <button class="btnIcon ico_more"><span class="hiddenText">더보기</span></button>
+                    <button class="btnText">임시저장</button>
+                </span> -->
+            </header>
+            <!-- <header class="header left">
+                <h2 class="title">왼쪽정렬 타이틀</h2>
+                <span class="tool">
+                    <button class="btnIcon"><span class="hiddenText">북마크</span></button>
+                    <button class="btnIcon"><span class="hiddenText">설정</span></button>
+                </span>
+            </header> -->
+            <div class="tabArea">
+                <ul class="tab">
+                    <li>
+                        <a href="/layout/layout_2.html"><span>메인</span></a>
+                    </li>
+                    <li>
+                        <a href="/layout/layout.html"><span>레이아웃</span></a>
+                    </li>
+                    <li class="on">
+                        <a href="/guide.html"><span>가이드</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <main id="main_content" class="content">
+            <div class="guide_wrap">
+                <h2 class="guide_tit">버튼</h2>
+                <button type="button" class="btn">버튼</button>
+                <button type="button" class="btn light">버튼</button>
+                <button type="button" class="btn" disabled>버튼</button>
+        
+                <a href="#" class="btn">a 버튼</a>
+                <a href="#" class="btn light">a 버튼</a>
+                <a href="#" class="btn disabled">a 버튼</a>
+                
+                <div class="btn_area">
+                    <button type="button" class="light">버튼f</button>
+                    <button type="button">버튼</button>
+                </div>
+                <div class="btn_area">
+                    <button type="button" class="light btnFluid">버튼</button>
+                    <button type="button">버튼</button>
+                </div>
+        
+                <hr>
+        
+                <h2 class="guide_tit">checkbox</h2>
+                <input type="checkbox" id="checkboxId" name="checkbox" checked>
+                <label for="checkboxId">checkbox</label>
+                <input type="checkbox" id="checkboxId2"  name="checkbox2">
+                <label for="checkboxId2">checkbox2</label>
+            
+                <input type="checkbox" class="checkboxToggle" id="checkboxToggleId" name="checkboxToggle" checked>
+                <label for="checkboxToggleId">checkboxToggle</label>
+                <input type="checkbox" class="checkboxToggle" id="checkboxToggleId2"  name="checkboxToggle2">
+                <label for="checkboxToggleId2">checkboxToggle2</label>
+        
+                <h2 class="guide_tit">radio</h2>
+                <input type="radio" id="radioId" name="radioSet" checked>
+                <label for="radioId">radio</label>
+                <input type="radio" id="radioId2" name="radioSet">
+                <label for="radioId2">radio2</label>
+                <input type="radio" id="radioId3" name="radioSet">
+                <label for="radioId3">radio3</label>
+        
+                <h2 class="guide_tit">input</h2>
+                <input type="text" placeholder="텍스트를 입력해 주세요">
+                <div class="searchInput">
+                    <input type="search" placeholder="검색어를 입력해 주세요">
+                    <button type="button" class="btnSearch">검색</button>
+                </div>
+                
+                <h2 class="guide_tit">textarea</h2>
+                <div class="textarea">
+                    <textarea placeholder="내용을 입력해주세요" maxlength="20000" aria-describedby="textCounter"></textarea>
+                    <span aria-live="polite" id="textCounter" class="textCounter">0/20,000자</span>
+                </div>
+        
+                <h2 class="guide_tit">select</h2>
+                <!-- <select name="" id="">
+                    <option value="">옵션1</option>
+                    <option value="">옵션2</option>
+                    <option value="">온셥3</option>
+                </select>
+                <select name="" id="" class="fluid">
+                    <option value="">옵션1</option>
+                    <option value="">옵션2</option>
+                    <option value="">온셥3</option>
+                </select> -->
+
+                <!-- <span class="selectPopup">
+                    <input type="text" value="선택" readonly>
+                    <ul>
+                        <li><a href=""></a></li>
+                    </ul>
+                </span> -->
+                <div  class="select_area">
+                    <a href="#select_1"  class="select">
+                        <span class="select_placeholder">알림 방식을 선택하세요.</span>
+                        <span class="select_value">디자이너</span>
+                    </a>
+                    <div class="select_popup" id="select_1">
+                        <div class="popup">
+                            <strong class="select_title">모집 알람 해지</strong>
+                            <div class="select_content">
+                                <ul>
+                                    <li></li>
+                                </ul>
+                                <div class="btn_area">
+                                    <button type="button" class="light popup_close">취소</button>
+                                    <button type="button">확인</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div  class="select_area">
+                    <a href="#select_2"  class="select">
+                        <span class="select_placeholder">알림 방식을 선택하세요.</span>
+                    </a>
+                    <div class="select_popup" id="select_2">
+                        <div class="popup">
+                            <strong class="select_title">모집 알람 해지</strong>
+                            <div class="select_content">
+                                <ul>
+                                    <li></li>
+                                </ul>
+                                <div class="btn_area">
+                                    <button type="button" class="light popup_close">취소</button>
+                                    <button type="button">확인</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- <label for="myBrowser">select :</label>
+                <input list="browsers" id="myBrowser" name="myBrowser" />
+                <datalist id="browsers">
+                    <option value="Chrome">
+                    <option value="Firefox">
+                    <option value="Internet Explorer">
+                    <option value="Opera">
+                    <option value="Safari">
+                    <option value="Microsoft Edge">
+                </datalist> -->
+                
+                <!-- alert_popup -->
+                <div class="popoup_area">
+                    <div class="alert_popup">
+                        <strong class="popup_title">모집 알람 해지</strong>
+                        <div class="popup_content">
+                            <p>모집 알람을 해지하시겠습니까?</p>
+                            <div class="btn_area">
+                                <button type="button" class="light">버튼</button>
+                                <button type="button">버튼</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //alert_popup -->
+
+            </div>
+        </main>
+    </div>
     
+    <script>
+        let select_area = document.querySelectorAll(".select_area");
+        let select = document.querySelectorAll(".select");
+        let popup_close = document.querySelectorAll(".popup_close");
+
+
+        for(let i=0; i < select.length; i++) {
+            select[i].addEventListener('click', event => {
+                let popupID = select[i].getAttribute('href');
+                let popup = document.querySelector(popupID);
+                
+                popup.classList.add("on");
+            });
+        };
+
+        for(let i=0; i < popup_close.length; i++) {
+            popup_close[i].addEventListener('click', event => {
+                let popup = popup_close[i].parentElement.parentElement.parentElement.parentElement;
+                console.log(parent);
+                
+                popup.classList.remove("on");
+            })
+        };      
+
+    </script>
 </body>
 </html>
